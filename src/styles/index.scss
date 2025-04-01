@@ -1,0 +1,15 @@
+@use 'reset';
+// @use 'vars';
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: url('src/assets/fond.png');
+  background-attachment: fixed;
+}
+
+@media (min-width: 2000px) {
+  body {
+    background-image: url('src/assets/fond.png');
+    background-size: cover;
+  }
+}

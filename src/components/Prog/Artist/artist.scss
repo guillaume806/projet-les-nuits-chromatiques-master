@@ -1,0 +1,574 @@
+.artist-page {
+  background-color: white;
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  bottom: 0;
+  right: 0;
+  height: 100vh;
+  width: 70vw;
+
+  .back-to-prog {
+    cursor: pointer;
+    background-color: #e3a303a1;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    padding: 1rem;
+    font-size: 25px;
+    border-radius: 15px;
+    color: white;
+    transition: 0.5s;
+    z-index: 1;
+    &:hover {
+      background-color: white;
+      transform: scale(1.1);
+      transition: 0.5s;
+      color: #e3a303a1;
+      border: 1px solid #e3a303a1;
+    }
+  }
+
+  .back-to-map {
+    background-color: red;
+    cursor: pointer;
+    position: relative;
+    top: 7rem;
+    left: 2rem;
+    font-size: 25px;
+    z-index: 1;
+
+    .back-to-map-text {
+      position: absolute;
+      top: 2.5rem;
+      left: 1.6rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: 0.5s;
+
+      &:hover {
+        transform: scale(1.3);
+        transition: 0.5s;
+      }
+    }
+
+    .back-to-map-cible {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .artist-picture {
+    background-size: auto 90%;
+    width: 70vw;
+    height: 25rem;
+    overflow: hidden;
+    img {
+      object-position: 0 25%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: .7;
+      // transform: translateY(5rem);
+       -webkit-transform: scale(1);
+	      transform: scale(1);
+	      -webkit-transition: .3s ease-in-out;
+	      transition: .3s ease-in-out;
+      &:hover{
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+        opacity: 1;
+      }
+    }
+  }
+
+  .artist-content {
+    text-align: center;
+    padding: 2rem;
+    width: 70vw;
+    
+
+
+    .name {
+      font-size: 70px;
+      font-weight: 600;
+      padding: 3rem;
+      border: 2px solid #e3a3038c;
+      margin-bottom: 2rem;
+    }
+
+    .artist-description {
+      font-size: 22px;
+      font-weight: 300;
+      line-height: 30px;
+      padding: 3rem;
+
+    }
+  }
+
+  .event-content {
+    text-align: center;
+    padding: 2rem;
+    
+    
+    .prog-span {
+      font-size: 30px;
+      text-transform: uppercase;
+      // font-style: italic;
+      font-weight: 600;
+      margin: 2rem;
+      // text-decoration: underline;
+    }
+
+    .bloc-event {
+      padding: 2rem;
+      border-bottom: 1px solid gray;
+      width: 80%;
+      margin: auto;
+      margin-bottom: 2rem;
+
+      .event-date {
+        width: 20rem;
+        margin: 1rem auto;
+        font-size: 20px;
+        margin-bottom: 1rem;
+        border: 1PX solid rgba(128, 128, 128, 0.699);
+        padding: 1rem;
+        border-radius: 10px;
+
+        .react-icons {
+          margin: 0 1rem;
+
+        }
+
+      }
+
+      .event-name {
+        width: 20rem;
+        color: white;
+        margin: auto;
+        padding: 1rem;
+        border-radius: 1rem;
+        font-size: 30px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        background-color: #e7b003;
+      }
+
+      .event-place {
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: rgba(170, 162, 162, 0.658);
+        transition: 0.3s;
+
+        .react-icons {
+          cursor: pointer;
+        }
+
+        &:hover {
+          transform: scale(1.1);
+          transition: 0.3s;
+        }
+      }
+
+      .event-description {
+          border-radius: 5px;
+          text-align: justify;
+          padding: 1rem 1rem;
+          font-size: 20px;
+          font-weight: 200;
+          line-height: 30px;
+  
+        p {
+          padding: 1rem;
+        }
+    }
+
+
+    }
+
+    .event {
+      height: 5rem;
+      margin: 3rem 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+      .event_info {
+        padding: 2rem;
+        border-radius: 30px;
+        font-size: 20px;
+        text-transform: uppercase;
+        background-color: #b1b1b163;
+        color: white;
+        font-weight: 600;
+
+        &:hover {
+          background-color: #e3a303;
+          transition: 0.2s ease-in-out;
+        }
+      }
+    }
+
+    .video {
+      height: 40rem;
+      margin: auto;
+
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+
+    }
+  }
+
+
+}
+
+@media (max-width: 1000px) {
+  .artist-page {
+    top: 10rem;
+    width: 100vw;
+    height: 90vh;
+
+    .artist-picture {
+      width: 100vw;
+    }
+
+    .artist-content{
+      width: 100vw;
+    }
+  }
+
+}
+
+@media (max-width: 700px) {
+  .artist-page {
+    top: 10rem;
+    width: 100vw;
+    height: 90vh;
+
+    .back-to-prog{
+      font-size: 15px;
+    }
+
+    .back-to-map {
+      font-size: 20px;
+    }
+
+    .artist-picture {
+      width: 100vw;
+      height: 15rem;
+    }
+  
+    .artist-content {
+      text-align: center;
+      padding: 20px;
+      width: 100vw;
+  
+  
+      .name {
+        font-size: 35px;
+        font-weight: 600;
+        padding: 1rem;
+        border: 2px solid #e3a3038c;
+        margin-bottom: 2rem;
+      }
+  
+      .artist-description {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 30px;
+        padding: 3rem;
+      }
+    }
+  
+    .event-content {
+      text-align: center;
+      padding: 10px;
+      
+      .prog-span {
+        font-size: 20px;
+        font-style: italic;
+        font-weight: 200;
+        margin: 2rem;
+        text-decoration: underline;
+      }
+  
+      .bloc-event {
+        padding: 20px;
+        border-bottom: 1px solid gray;
+        margin: auto;
+        margin-bottom: 2rem;
+  
+        .event-date {
+          width: 10rem;
+          margin: 1rem auto;
+          font-size: 14px;
+          margin-bottom: 1rem;
+          border: 1PX solid rgba(128, 128, 128, 0.699);
+          padding: 1rem;
+          border-radius: 10px;
+  
+          .react-icons {
+            margin: 0 1rem;
+  
+          }
+  
+        }
+  
+        .event-name {
+          width: 10rem;
+          color: white;
+          margin: auto;
+          padding: 0.8rem;
+          border-radius: 1rem;
+          font-size: 18px;
+          font-weight: 600;
+          text-transform: uppercase;
+          margin-bottom: 1rem;
+          background-color: #e7b003;
+        }
+  
+        .event-place {
+          font-size: 20px;
+          font-weight: 600;
+          margin-bottom: 1rem;
+          color: rgba(170, 162, 162, 0.658);
+          transition: 0.3s;
+  
+          .react-icons {
+            cursor: pointer;
+          }
+  
+          &:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+          }
+        }
+  
+        .event-description {
+            border-radius: 5px;
+            text-align: justify;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: 200;
+            line-height: 30px;
+    
+          p {
+            padding: 1rem;
+          }
+      }
+  
+  
+      }
+  
+      .event {
+        height: 5rem;
+        margin: 3rem 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+  
+        .event_info {
+          padding: 2rem;
+          border-radius: 30px;
+          font-size: 20px;
+          text-transform: uppercase;
+          background-color: #b1b1b163;
+          color: white;
+          font-weight: 600;
+  
+          &:hover {
+            background-color: #e3a303;
+            transition: 0.2s ease-in-out;
+          }
+        }
+      }
+  
+      .video {
+        height: 40rem;
+        margin: auto;
+  
+        iframe {
+          width: 100%;
+          height: 100%;
+        }
+  
+      }
+    }
+  
+  
+  }
+}
+
+
+
+@media (max-width: 320px) {
+  .artist-page {
+
+  
+    .back-to-prog {
+
+    }
+  
+    .back-to-map {
+
+  
+      .back-to-map-text {
+
+      }
+  
+      .back-to-map-cible {
+
+      }
+    }
+  
+    .artist-picture {
+      width: 100vw;
+      height: 15rem;
+    }
+  
+    .artist-content {
+      text-align: center;
+      padding: 20px;
+      width: 100vw;
+  
+  
+      .name {
+        font-size: 35px;
+        font-weight: 600;
+        padding: 1rem;
+        border: 2px solid #e3a3038c;
+        margin-bottom: 2rem;
+      }
+  
+      .artist-description {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 30px;
+        padding: 3rem;
+      }
+    }
+  
+    .event-content {
+      text-align: center;
+      padding: 10px;
+      
+      .prog-span {
+        font-size: 20px;
+        font-style: italic;
+        font-weight: 200;
+        margin: 2rem;
+        text-decoration: underline;
+      }
+  
+      .bloc-event {
+        padding: 20px;
+        border-bottom: 1px solid gray;
+        margin: auto;
+        margin-bottom: 2rem;
+  
+        .event-date {
+          width: 10rem;
+          margin: 1rem auto;
+          font-size: 14px;
+          margin-bottom: 1rem;
+          border: 1PX solid rgba(128, 128, 128, 0.699);
+          padding: 1rem;
+          border-radius: 10px;
+  
+          .react-icons {
+            margin: 0 1rem;
+  
+          }
+  
+        }
+  
+        .event-name {
+          width: 10rem;
+          color: white;
+          margin: auto;
+          padding: 0.8rem;
+          border-radius: 1rem;
+          font-size: 18px;
+          font-weight: 600;
+          text-transform: uppercase;
+          margin-bottom: 1rem;
+          background-color: #e7b003;
+        }
+  
+        .event-place {
+          font-size: 20px;
+          font-weight: 600;
+          margin-bottom: 1rem;
+          color: rgba(170, 162, 162, 0.658);
+          transition: 0.3s;
+  
+          .react-icons {
+            cursor: pointer;
+          }
+  
+          &:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+          }
+        }
+  
+        .event-description {
+            border-radius: 5px;
+            text-align: justify;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: 200;
+            line-height: 30px;
+    
+          p {
+            padding: 1rem;
+          }
+      }
+  
+  
+      }
+  
+      .event {
+        height: 5rem;
+        margin: 3rem 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+  
+        .event_info {
+          padding: 2rem;
+          border-radius: 30px;
+          font-size: 20px;
+          text-transform: uppercase;
+          background-color: #b1b1b163;
+          color: white;
+          font-weight: 600;
+  
+          &:hover {
+            background-color: #e3a303;
+            transition: 0.2s ease-in-out;
+          }
+        }
+      }
+  
+      .video {
+        height: 40rem;
+        margin: auto;
+  
+        iframe {
+          width: 100%;
+          height: 100%;
+        }
+  
+      }
+    }
+  
+  
+  }
+}
